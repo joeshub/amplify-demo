@@ -1,0 +1,71 @@
+{
+    "identityPoolName": "demoamplifyprojecte6e89a6d_identitypool_e6e89a6d",
+    "allowUnauthenticatedIdentities": false,
+    "lambdaLogPolicy": "demoam_e6e89a6d_lambda_log_policy",
+    "openIdLambdaRoleName": "demoam_e6e89a6d_openid_lambda_role",
+    "openIdRolePolicy": "demoam_e6e89a6d_openid_pass_role_policy",
+    "openIdLambdaIAMPolicy": "demoam_e6e89a6d_openid_lambda_iam_policy",
+    "openIdLogPolicy": "demoam_e6e89a6d_openid_lambda_log_policy",
+    "userPoolName": "demoamplifyprojecte6e89a6d_userpool_e6e89a6d",
+    "autoVerifiedAttributes": [
+        "email"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [
+        "SMS Text Message"
+    ],
+    "roleName": "demoame6e89a6d_sns-role",
+    "roleExternalId": "demoame6e89a6d_role_external_id",
+    "policyName": "demoame6e89a6d-sns-policy",
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [],
+    "requiredAttributes": [
+        "email"
+    ],
+    "userpoolClientName": "demoame6e89a6d_app_client",
+    "userpoolClientGenerateSecret": true,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientWriteAttributes": [
+        "email"
+    ],
+    "userpoolClientReadAttributes": [
+        "email"
+    ],
+    "mfaLambdaRole": "demoame6e89a6d_totp_lambda_role",
+    "mfaLambdaLogPolicy": "demoame6e89a6d_totp_lambda_log_policy",
+    "mfaPassRolePolicy": "demoame6e89a6d_totp_pass_role_policy",
+    "mfaLambdaIAMPolicy": "demoame6e89a6d_totp_lambda_iam_policy",
+    "userpoolClientLambdaRole": "demoame6e89a6d_userpoolclient_lambda_role",
+    "userpoolClientLogPolicy": "demoame6e89a6d_userpoolclient_lambda_log_policy",
+    "userpoolClientLambdaPolicy": "demoame6e89a6d_userpoolclient_lambda_iam_policy",
+    "userpoolClientSetAttributes": false,
+    "resourceName": "demoamplifyprojecte6e89a6d",
+    "authSelections": "identityPoolAndUserPool",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    },
+    "unauthRoleArn": {
+        "Fn::GetAtt": [
+            "UnauthRole",
+            "Arn"
+        ]
+    },
+    "useDefault": "default",
+    "usernameAttributes": [
+        "email"
+    ]
+}

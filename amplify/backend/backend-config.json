@@ -1,0 +1,8 @@
+{
+	"auth": {
+		"demoamplifyprojecte6e89a6d": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}

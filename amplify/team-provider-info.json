@@ -1,0 +1,19 @@
+{
+    "demodevenv": {
+        "awscloudformation": {
+            "AuthRoleName": "demo-amplify-project-demodevenv-20190701110149-authRole",
+            "UnauthRoleArn": "arn:aws:iam::691210926176:role/demo-amplify-project-demodevenv-20190701110149-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::691210926176:role/demo-amplify-project-demodevenv-20190701110149-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "demo-amplify-project-demodevenv-20190701110149-deployment",
+            "UnauthRoleName": "demo-amplify-project-demodevenv-20190701110149-unauthRole",
+            "StackName": "demo-amplify-project-demodevenv-20190701110149",
+            "StackId": "arn:aws:cloudformation:us-west-2:691210926176:stack/demo-amplify-project-demodevenv-20190701110149/4c3545f0-9c2a-11e9-ac81-0650fec6e554"
+        },
+        "categories": {
+            "auth": {
+                "demoamplifyprojecte6e89a6d": {}
+            }
+        }
+    }
+}
