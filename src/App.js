@@ -1,7 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Auth } from 'aws-amplify';
+import { API, graphqlOperation } from 'aws-amplify';
 
 import './App.css';
+
+const ListTodos = `
+  query {
+    listTodos {
+      items {
+        id name description completed
+      }
+    }
+  }
+`
 
 function App() {
   const [signUpStep, setSignUpStep] = useState(0);
@@ -10,6 +21,16 @@ function App() {
   const [email, setEmail] = useState('');
   const [phone_number, setPhoneNumber] = useState('');
   const [authenticationCode, setAuthenticationCode] = useState('');
+  const [todos, setTodos] = useState([]);
+
+  useEffect(() => {
+    const getToDos = async () => {
+      const todoData = await API.graphql(graphqlOperation(ListTodos));
+      setTodos(todoData.data.listTodos.items);
+    }
+
+    getToDos();
+  }, []);
 
   const signUp = async () => {
     try {
@@ -39,6 +60,13 @@ function App() {
 
   return (
     <div className="App">
+      <ul>
+        {
+          todos.map((todo, i) => (
+            <li key={i}><h2>{todo.name}</h2> <p>{todo.description}</p></li>
+          ))
+        }
+      </ul>
       {signUpStep === 0 && (
         <>
           <input type="text" name="username" placeholder="Username - email" onChange={e => setuserName(e.target.value)} />
